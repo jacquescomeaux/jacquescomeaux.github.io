@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Test"
+date:   2022-12-06 16:06:41 -0500
+categories: jekyll update
+---
+
+Hi there. More content coming soon™.
+
+For now, have a look at the hello world of dependent types in Haskell:
+
+{% highlight haskell %}
+-- | Peano natural numbers
+type Nat :: Type
+data Nat = Zero | Succ Nat
+
+-- | Singletons for 'Nat'
+type SNat :: Nat -> Type
+data SNat n where
+  SZ :: SNat Zero
+  SS :: SNat n -> SNat (Succ n)
+
+{% endhighlight %}
